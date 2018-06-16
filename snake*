@@ -1,0 +1,20 @@
+import turtle,random
+class Cell:
+  def __init__(self,cell_size,t,x,y):
+    self.cell_size = cell_size
+    self.x = x
+    self.y = y
+    
+    self.t=t
+    
+  def draw_square(self):
+    for side in range(4):
+      self.t.fd(self.cell_size)
+      self.t.left(90)
+  def draw_snake(self):
+    for side in range(5):
+      cell=cell(10,turtle.turtle(),i*10,i*10)
+      cell.draw_square()
+      cell.draw_snake()
+cell=Cell(10,turtle.Turtle(),0,0)
+cell.draw_square()
